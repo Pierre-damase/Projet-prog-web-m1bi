@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="fr">
+	  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="IMBERT Pierre & MARGUERIT Gwendolyn">
+        <title>Contact</title>
+
+        <!-- Custom Common Link -->
+        <link rel="icon" href="../img/favicon-avion-rouge.png" type="image/png">
+        <link type="text/css" href="../css/FontAwesome/fontawesome-free-5.12.1-web/css/all.css" rel="stylesheet">
+        <!-- Custom Common Script -->
+        <script src="../js/main.js"></script>
+        <script src="../js/menu.js"></script>
+        <script src="../js/footer.js"></script>
+        <!-- Custom Common Style -->
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+        <!-- Custom Specific Style To Page -->
+		    <link rel="stylesheet" type="text/css" href="../css/formu.css">
+        <!-- Custom Specific Script To Page -->
+        <script src="../js/form.js"></script>
+	  </head>
+
+	  <body onload="menu(); footer(); setActivePage(); undefinedChamp();" >
+
+        <div class="navbar" id="navbar"></div>
+
+        <header>
+			      <h1> Formulaire de contact </h1>
+		    </header>
+
+        <div class="contenu">
+
+            <div class="section">
+                <form name="formulaire">
+                    <div class="champ-form">
+                        <label for="nom">Nom <i class="fas fa-asterisk"></i></label>
+                        <div class="element">
+                            <input type="text" name="nom" id="nom" placeholder="Imbert" value="">
+                        </div>
+                    </div>
+
+                    <div class="champ-form">
+                        <label for="prenom">Prénom <i class="fas fa-asterisk"></i></label>
+                        <div class="element">
+                            <input type="text" name="prenom" id="prenom" placeholder="Pierre" value="">
+                        </div>
+                    </div>
+
+                    <div class="champ-form">
+                        <label>Sexe</label>
+                        <div class="element" id="radio-btn">
+                            <input type="radio" name="gender" id="male" value="male"><label for="male">Homme</label>
+                            <input type="radio" name="gender" id="female" value="female"><label for="female">Femme</label>
+                            <input type="radio" name="gender" id="na" value="na" checked><label for="na">Non renseigné</label>
+                        </div>
+                    </div>
+
+                    <div class="champ-form">
+                        <label for="mail">Adresse E-mail <i class="fas fa-asterisk"></i></label>
+                        <div class="element">
+                            <input type="email" name="mail" id="mail" placeholder="exemple@hotmail.fr" value="">
+                        </div>
+                    </div>
+
+                    <div class="champ-form">
+                        <label for="tel">Téléphone </label>
+                        <div class="element">
+                            <input type="tel" name="tel" id="tel" placeholder="00 00 00 00 00">
+                        </div>
+                    </div>
+
+                    <div class="champ-form">
+                        <label for="objet">Objet de la demande <i class="fas fa-asterisk"></i></label>
+                        <div class="element">
+                            <select id="objet" name="obj" onchange="getChamp();">
+                                <option value="image">Puis-je utiliser vos images ?</option>
+                                <option value="error">J'ai constaté une anomalie sur votre site.</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="champ-form">
+                        <label for="but">Dans quel but souhaitez-vous utiliser nos image ? </label>
+                        <div class="element">
+                            <textarea name="but" id="but"></textarea>
+                        </div>
+                    </div>
+                    <div class="champ-form obj-not-selected">
+                        <label>Problème.s détecté.s ? </label>
+                        <div class="element" id="checkbox">
+                            <input type="checkbox" id="pb1" name="pb" value="img"><label for="pb1">Images qui ne chargent pas</label>
+                            <input type="checkbox" id="pb2" name="pb" value="staline"><label for="pb2">Liens non fonctionnels</label>
+                            <input type="checkbox" id="pb3" name="pb" value="vlad"><label for="pb3">Mauvaise adaptabilité à l'écran</label>
+                        </div>
+                    </div>
+
+                    <div class="champ-form">
+                        <label for="suggestions">Avez-vous des suggestions ? </label>
+                        <div class="element">
+                            <textarea name="suggestions" id="suggestions"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="champ-form">
+                        <label for="destination">Quelle est votre destination préféré ? <i class="fas fa-asterisk"></i></label>
+                        <div class="element">
+                            <select id="destination" name="destination" size="1">
+                                <option value="oxford">Oxford</option>
+                                <option value="seville">Séville</option>
+                                <option value="cordoue">Cordoue</option>
+                                <option value="tokyo">Tokyo</option>
+                                <option value="montreal">Montréal</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="button">
+                        <input type="button" class="btn" value="Envoyer" onclick="controlForm();">
+                        <input type="reset" class="btn" value="Reset" onclick="resetButton();">
+                    </div>
+                </form>
+
+                <div class="texte-form"></div>
+
+            </div>
+
+            <div class='main'>
+                <div class="contenu-main">
+                    <div class='info'>
+                        <h3>Adresse mail</h3>
+                        <p> <a href='mailto:gmarguerit@gmail.com'>gmarguerit@gmail.com</a> </p>
+					              <p> <a href='mailto:pierre.damase.mbert@gmail.com'>pierre.damase.mbert@gmail</a></p>
+                    </div>
+                    <div class='info'>
+                        <h3>Adresse universitaire</h3>
+                        <p> <strong>Université Paris Diderot</strong><br>
+                            35 rue Héléne Brion<br>
+                            75205 Paris Cedex 13<br>
+                            France
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+      <footer id="footer"></footer>
+	  </body>
+</html>

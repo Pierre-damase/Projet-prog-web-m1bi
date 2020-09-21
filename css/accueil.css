@@ -1,0 +1,167 @@
+.titre {
+	  background-color:#8b1538;
+	  text-align:center;
+	  padding-bottom:2%;
+    padding-top:2%;
+	  color:#F8F8FF;
+    width: 100%;
+}
+
+.titre h1 {
+	  margin:0;
+}
+
+.gauche {
+	  order:0;
+	  background-color:#8b1538;
+	  width:15%;
+	  bottom:0;
+	  margin-right:1%;
+}
+
+.droite {
+	  order:2;
+	  background-color:#8b1538;
+	  width:15%;
+	  margin-left:1%;
+}
+
+.description {
+	  text-align:center;
+	  margin-top:7%;
+	  margin-bottom:7%;
+}
+
+.contenu_accueil {
+	  display:flex;
+    flex-direction:column;
+	  /* flex-wrap:wrap; */
+    flex: 50%;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #8b1538;
+    margin: 2%;
+    padding: 1.25rem;
+}
+
+.section .texte {
+    flex: 25%;
+    text-align: justify;
+    padding: 0 1.5rem 0 1.5rem;
+}
+
+.section .carousel {
+    flex: 60%;
+}
+
+.texte a {
+    text-decoration: none;
+    color: #8b1538;
+}
+
+.texte h1 {
+    margin-top: 0.5rem;
+}
+
+/************/
+/* Carousel */
+/************/
+.carousel {
+    /* width: 100%; */
+    overflow: hidden;
+    display: inline-table;
+}
+
+.slide4img figure{
+    width: 500%;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    left: 0;
+    text-align: left;
+    animation: 30s slidy4 infinite;
+    position: relative;
+    z-index: -1;
+    top: 0;
+}
+
+/* .carousel { */
+/* 	width:68%; */
+/* 	order:1; */
+/* }  */
+
+.carousel figure img{
+    width: 20%;
+    height: 450px;
+    border-radius: 25px;
+}
+
+
+/* Pour 4 images : chacune restant 15% du temps */
+@-webkit-keyframes slidy4{
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+}
+
+
+/**************/
+/* Responsive */
+/**************/
+ @media screen and (max-width: 1000px){
+    .section {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .section .texte {
+        flex: 95%;
+        padding: 0.75rem 0 0.75rem 0;
+    }
+
+    .section .carousel {
+        flex: 90%;
+    }
+
+    .carousel {
+        width: 100%;
+    }
+
+    .carousel figure img{
+        height: 350px;
+    }
+    .texte:nth-child(1) {
+        padding-top: 0rem;
+    }
+    .texte:nth-last-child(1) {
+        padding-bottom: 0rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .carousel figure img{
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .carousel figure img{
+        height: 200px;
+    }
+}
+
+@media screen and (min-width: 1500px){
+    .section .carousel {
+        flex: 55%;
+    }
+}

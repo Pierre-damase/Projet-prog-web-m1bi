@@ -1,0 +1,100 @@
+header {
+	background-color:#8b1538;
+	text-align:center;
+	padding:1%;
+	color:#F8F8FF;
+}
+
+.main {
+    background-color: #F8F8FF;
+}
+.main a, .main p, .main h3 {
+    color: #8b1538;
+}
+
+.section {
+    flex: 70%;
+    flex-direction: column;
+}
+
+.champ-form {
+    display: flex;
+    flex-direction: row;
+    margin-left: 1.5rem;
+}
+.champ-form > label {
+    flex: 45%;
+    font-size: large;
+    padding: 12px 12px 12px 0;
+}
+.champ-form .element {
+    flex: 50%;
+}
+
+input[type=text], input[type=email], input[type=tel], textarea, select {
+    width: 90%;
+    resize: vertical;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom:1rem;
+}
+input[type=radio] {
+    margin-bottom:1rem;
+}
+
+.champ-form .fas {
+    font-size: 0.5rem;
+    color: red;
+}
+
+#checkbox:last-child{
+    margin-bottom: 1rem;
+}
+#checkbox:not(:last-child){
+    margin-bottom: 0.4rem;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+}
+.btn {
+    flex: 45%;
+    margin: 1rem;
+    padding: 10px;
+    background-color: #8b1538;
+    color: #F8F8FF;
+    font-size: medium;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #7c1734;
+    border: 1px solid black;
+}
+
+.not-valid {
+    border: 2px solid #C70039;
+}
+
+.obj-not-selected {
+    display: none;
+}
+
+.texte-form {
+    flex: 15%;
+    text-align: justify;
+    padding: 0 1.5rem 0 1.5rem;
+    color: black;
+}
+
+form {
+    flex:75%;
+}
+
+
+@media screen and (max-width: 800px) {
+    .champ-form {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,57 @@
+header {
+	background-color:#8b1538;
+	text-align:center;
+	color:white;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+}
+
+h1 {
+    margin-top: 0%;
+}
+
+.contenu_CV {
+	  display:flex;
+    flex-direction: row;
+	  background-color:#F8F8FF;
+    text-align: center;
+}
+
+.contenu_CV .Competences_complementaires ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.bloc1, .bloc2 {
+	display:flex;
+	flex-direction:column;
+	margin: 5%;
+	flex: 40%;
+}
+
+h3 {
+	text-align:center;
+	color: #8b1538;
+}
+
+@media screen and (max-width: 600px) {
+	.contenu_CV { 
+	flex-direction:column;
+	}
+
+	.bloc1, .bloc2 {
+		width:90%;
+		text-align: center;
+	}
+	
+	.bloc2 ul {
+		text-align:left;
+	}
+}
+
+@media screen and (max-width:850px){
+    .contenu_CV {
+        flex-direction: column;
+        flex: 90%;
+    }
+}
