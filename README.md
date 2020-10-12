@@ -15,9 +15,9 @@ Projet réaliser dans le cadre du l'UE *programmation web* en master 1 bioinform
 Des images personnelles ont été utilisées pour réaliser le site web.
 
 ## Auteurs
-Pierre Imbert : pierre.damase.imbert@hotmail.fr
+Pierre Imbert
 
-Gwendolyn Marguerit : gmarguerit@gmail.com
+Gwendolyn Marguerit
 
 Université de Paris M1-BI
 
